@@ -1,0 +1,46 @@
+
+<div *ngFor="let user of usersArray" style="margin: 20px;">
+    <button (click)="onClickProductionServer(user.id)">{{user.name}}</button>
+</div>
+<hr>
+<table *ngIf="_id">
+    <tr>
+        <td>NAME</td>
+        <td>ID</td>
+        <td>STATUS</td>
+    </tr>
+  
+   
+    
+    <tr>
+        <td>{{usersArray[_id-1].name}}</td>
+        <td>{{usersArray[_id-1].id}}</td>
+        <td>{{usersArray[_id-1].server}}</td>
+    </tr>
+</table>
+<br><br>
+<button (click)="onChangeServerButton()" *ngIf="_id">EDIT</button>
+<br><br>
+
+<div *ngIf="isActive">
+    <input type="text"[(ngModel)]="yourServer" placeholder="update names">
+<button (click)="onClickSubmit()" [disabled]="!yourServer">submit</button>
+<br>
+<br>
+<input type="text" placeholder="update for status" [(ngModel)]="yourServerStatus">
+<button (click)="onClickStatus()" [disabled]=" !yourServerStatus || yourServerStatus !== 'offline' && yourServerStatus !== 'online' ">submit</button>
+</div>
+<!-- <input type="text" [(ngModel)]="value">
+<button (click)="onClick()" *ngIf="x">click me</button>
+<span *ngIf="!x">{{isPalin}}</span> -->
+
+<!-- <input type="text" [(ngModel)]="numbersString">
+<button (click)="buttonClick()">reverse now </button>
+{{numbersString1}} -->
+<button (click)="addClick()">positive</button>
+<button (click)="subClick()">negative</button>
+<button (click)="sumClick()">add</button>
+<div *ngFor="let numbers of array1">{{numbers}}</div>
+<input type="text" [(ngModel)]="value">
+
+

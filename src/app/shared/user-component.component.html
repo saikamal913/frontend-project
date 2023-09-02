@@ -1,0 +1,18 @@
+<div *ngFor="let customer of customerArray">
+    <button style="margin: 20px;" (click)="onCustomerClick(customer.id,customer.name)">{{customer.name}}</button>
+</div>
+<hr>
+<div *ngIf="singleId">
+    <h3>{{customerArray[singleId-1].name}}</h3>
+<h3>{{customerArray[singleId-1].id}}</h3>
+</div>
+
+
+<br>
+<br>
+<br>
+
+<div  *ngFor="let num of numberArray">{{num.num}}
+    <button (click)="addNewNumber(num)">click me</button>
+    <button (click)="deleteNumber(num.id)">delete</button>
+</div>

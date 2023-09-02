@@ -1,0 +1,20 @@
+<h4>welcome to server manager</h4>
+<p>manage your servers and users</p>
+<button (click)="onLoadServer()">Load Servers</button>
+<button style="margin: 10px;" (click)="onClickLogin()">Login</button>
+<button> Log Out</button>
+<br>
+<br>
+<input type="text" placeholder="USER NAME" *ngIf="isLogin">
+<br><br>
+<input type="text" placeholder="PASSWORD" *ngIf="isLogin">
+<br>
+<input type="text" [(ngModel)]="searchTerm">
+<br>
+
+<div  *ngFor="let persons of filteredPerson">
+{{persons.name}}
+</div>
+
+
+
