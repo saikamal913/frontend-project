@@ -16,4 +16,7 @@ export class AppComponent implements OnInit{
       console.log( '@@@@' +'kamal')
     }
   }
+  testMethod1() {
+console.log('tested')
+  }
 }
