@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
       console.log( '@@@@' +'kamal')
     }
   }
-  testMethod1() {
-console.log('tested')
+  testingSum() {
+    return 2+2
   }
 }
